@@ -53,7 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'django_forum.urls'
@@ -86,18 +86,18 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-# DATABASES = {
-#     'default': {
-#         # 'ENGINE': 'django.db.backends.sqlite3',
-#         # 'NAME': BASE_DIR / 'db.sqlite3',
-#         "ENGINE": "django.db.backends.postgresql",
-#         "NAME": "dficeecmroktm6",
-#         "USER": "rlurcjszxaujkv",
-#         "HOST": "ec2-44-199-49-128.compute-1.amazonaws.com",
-#         "PORT": 5432,
-#         "PASSWORD": "a23df45ad70b987be11829b55e856d8477945d6831907078647d8f0eb6d8a207",
-#     }
-# }
+DATABASES = {
+    'default': {
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "dficeecmroktm6",
+        "USER": "rlurcjszxaujkv",
+        "HOST": "ec2-44-199-49-128.compute-1.amazonaws.com",
+        "PORT": 5432,
+        "PASSWORD": "a23df45ad70b987be11829b55e856d8477945d6831907078647d8f0eb6d8a207",
+    }
+}
 
 
 
@@ -143,7 +143,7 @@ cloudinary.config(
     cloud_name="ddapxjixz",
     api_key="398165954551237",
     api_secret="cTXjbk45V9DZIU3SlGB-A5SFCmc",
-    # secure=True,
+    secure=True,
 )
 
 
@@ -156,4 +156,4 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-STATIC_URL = "/static"
+STATIC_URL = "/static/"
