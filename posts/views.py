@@ -16,10 +16,12 @@ def index(request):
     posts = Post.objects.all().order_by('-created_at')
     return render(request,'posts.html',
               {'posts':posts})
+
 def delete(request,post_id):
      post=Post.objects.get(id=post_id)
      post.delete()
      return HttpResponseRedirect('/')
+     
 def edit(request,post_id):
     post=Post.objects.get(id=post_id)
     if request.method == 'POST':
